@@ -39,7 +39,19 @@ public class Email {
         System.out.println("Enter your department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for None");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
-        if (depChoice == 1) {
+        switch (depChoice) {
+            case 1 :
+                return "Sales";
+            case 2 :
+                return "Development";
+
+            case 3 :
+                return "Accounting";
+
+
+        }
+      // version 2
+      /*  if (depChoice == 1) {
             return "Sales";
         } else if (depChoice == 2) {
             return "Development";
@@ -47,7 +59,11 @@ public class Email {
             return "Accounting";
         } else  {
             return "None";
-        }
+        }*/
+
+
+
+     return "None";
     }
 
     // generate a random password
@@ -92,7 +108,7 @@ public class Email {
     public String showInfo() {
         return "Display name: " + firstName + " " + lastName +
                 "\nCompany email : " + email +
-                "\nMail box capacity: " + mailBoxCapacity + "Mb";
+                "\nMail box capacity: " + mailBoxCapacity + " Mb";
 
     }
 
